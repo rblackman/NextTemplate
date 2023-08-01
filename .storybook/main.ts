@@ -5,8 +5,8 @@ const config: StorybookConfig = {
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
-		'@storybook/addon-onboarding',
 		'@storybook/addon-interactions',
+		'@storybook/addon-a11y',
 	],
 	staticDirs: ['../public'],
 	framework: {
@@ -17,4 +17,5 @@ const config: StorybookConfig = {
 		autodocs: 'tag',
 	},
 };
+
 export default config;
