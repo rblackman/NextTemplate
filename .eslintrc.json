@@ -1,8 +1,17 @@
 {
-	"extends": ["next", "next/core-web-vitals", "eslint:recommended", "prettier"],
+	"extends": ["plugin:storybook/recommended", "next", "next/core-web-vitals", "eslint:recommended", "prettier"],
 	"globals": {
 		"React": "readonly"
 	},
+	"ignorePatterns": ["**/stories/*"],
+	"overrides": [
+		{
+			"files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+			"rules": {
+				"storybook/hierarchy-separator": "error"
+			}
+		}
+	],
 	"plugins": ["prettier"],
 	"rules": {
 		"no-unused-vars": [

@@ -8,6 +8,14 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.7",
 		"@commitlint/config-conventional": "^17.6.7",
+		"@storybook/addon-essentials": "7.2.0",
+		"@storybook/addon-interactions": "7.2.0",
+		"@storybook/addon-links": "7.2.0",
+		"@storybook/addon-onboarding": "1.0.8",
+		"@storybook/blocks": "7.2.0",
+		"@storybook/nextjs": "7.2.0",
+		"@storybook/react": "7.2.0",
+		"@storybook/testing-library": "0.2.0",
 		"@types/node": "20.4.5",
 		"@types/react": "18.2.18",
 		"@types/react-dom": "18.2.7",
@@ -15,9 +23,11 @@
 		"eslint-config-next": "^13.4.12",
 		"eslint-config-prettier": "^8.9.0",
 		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-storybook": "^0.6.13",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.3",
 		"prettier": "^3.0.0",
+		"storybook": "7.2.0",
 		"typescript": "5.1.6"
 	},
 	"engines": {
@@ -29,11 +39,13 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
+		"build-storybook": "storybook build",
 		"dev": "cross-env NODE_OPTIONS='--inspect' next dev",
 		"lint": "next lint",
 		"prepare": "husky install",
 		"prettier": "prettier --write .",
 		"start": "next start",
+		"storybook": "storybook dev -p 6006",
 		"type-check": "tsc --noEmit"
 	},
 	"version": "0.1.0"
