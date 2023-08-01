@@ -1,3 +1,4 @@
+import RecoilClientRoot from '@components/recoilClientRoot';
 import { Overpass } from 'next/font/google';
 import './globals.css';
 
@@ -11,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={overpass.className}>{children}</body>
+			<RecoilClientRoot>
+				<body className={overpass.className}>{children}</body>
+			</RecoilClientRoot>
 		</html>
 	);
 }
