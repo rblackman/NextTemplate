@@ -24,7 +24,8 @@
 			"@state": ["./state/*"],
 			"@t": ["./types/*"],
 			"@app": ["./app/*"],
-			"@helpers": ["./helpers/*"]
+			"@helpers": ["./helpers/*"],
+			"@components": ["./components/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
