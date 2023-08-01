@@ -1,22 +1,40 @@
 {
-  "name": "storybook-sample",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.4.5",
-    "@types/react": "18.2.18",
-    "@types/react-dom": "18.2.7",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.1.6"
-  }
+	"dependencies": {
+		"next": "13.4.12",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"sharp": "^0.32.4"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.6.7",
+		"@commitlint/config-conventional": "^17.6.7",
+		"@types/node": "20.4.5",
+		"@types/react": "18.2.18",
+		"@types/react-dom": "18.2.7",
+		"eslint": "8.46.0",
+		"eslint-config-next": "^13.4.12",
+		"eslint-config-prettier": "^8.9.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.3",
+		"prettier": "^3.0.0",
+		"typescript": "5.1.6"
+	},
+	"engines": {
+		"node": ">=14.0.0",
+		"npm": "please-use-yarn",
+		"yarn": ">=1.22.0"
+	},
+	"name": "storybook-sample",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+		"lint": "next lint",
+		"prepare": "husky install",
+		"prettier": "prettier --write .",
+		"start": "next start",
+		"type-check": "tsc --noEmit"
+	},
+	"version": "0.1.0"
 }
