@@ -1,0 +1,24 @@
+.button {
+	--button-bg: #000;
+	--button-text: #fff;
+	--button-outline: #000;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	background-color: var(--button-bg);
+	color: var(--button-text);
+	border: 1px solid var(--button-outline);
+	boarder-radius: 0.5rem;
+	padding: 0.25rem 1rem;
+	text-align: center;
+}
+
+.button.outline {
+	--button-bg: transparent;
+	--button-text: var(--button-outline);
+}
+
+.button.red {
+	--button-bg: #f00;
+	--button-text: #fff;
+	--button-outline: #f00;
+}
