@@ -17,7 +17,7 @@ const meta = {
 			name: 'href',
 			description: 'The link to navigate to',
 			table: { category: 'Content' },
-			if: { arg: 'href', exists: true }
+			if: { arg: 'href', exists: true },
 		},
 
 		variant: {
