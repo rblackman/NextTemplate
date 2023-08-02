@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button, { ButtonButtonProps, LinkButtonProps } from './button';
+import Button, { ButtonProps } from './button';
 import { mockButtonProps } from './button.mocks';
 
 const meta = {
@@ -17,6 +17,7 @@ const meta = {
 			name: 'href',
 			description: 'The link to navigate to',
 			table: { category: 'Content' },
+			if: { arg: 'href', exists: true }
 		},
 
 		variant: {
@@ -26,8 +27,8 @@ const meta = {
 				category: 'Appearance',
 				defaultValue: { summary: 'default' },
 			},
-			options: ['red', 'green', 'default'],
-			control: { type: 'select' },
+			options: ['default', 'red', 'green', 'blue'],
+			control: { type: 'radio' },
 		},
 		buttonType: {
 			name: 'Button Type',
@@ -36,6 +37,7 @@ const meta = {
 				category: 'Control',
 				defaultValue: { summary: 'button' },
 			},
+			if: { arg: 'buttonType', exists: true },
 			options: ['button', 'submit', 'reset'],
 			control: { type: 'radio' },
 			defaultValue: 'button',
@@ -57,7 +59,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const linkButtonArgs: LinkButtonProps = {
+const linkButtonArgs: ButtonProps = {
 	...mockButtonProps.primary,
 };
 
@@ -65,7 +67,7 @@ export const LinkButton: Story = {
 	args: linkButtonArgs,
 };
 
-const buttonButtonArgs: ButtonButtonProps = {
+const buttonButtonArgs: ButtonProps = {
 	...mockButtonProps.buttonButton,
 };
 

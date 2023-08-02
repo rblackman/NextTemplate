@@ -1,24 +1,76 @@
 .button {
-	--button-bg: #000;
-	--button-text: #fff;
-	--button-outline: #000;
+	--button-r: var(--dark-blue-r);
+	--button-g: var(--dark-blue-g);
+	--button-b: var(--dark-blue-b);
+	--button-color: rgb(var(--button-r), var(--button-g), var(--button-b));
+	--button-contrast: var(--white);
+	--button-bg: var(--button-color);
+	--button-text: var(--button-contrast);
+	--button-border: var(--button-color);
+	--button-outline: transparent;
+
 	-webkit-appearance: none;
-	-webkit-border-radius: 0;
+	text-decoration: none;
+
+	outline: 0.2rem solid var(--button-outline);
+	outline-offset: 0.2rem;
+
 	background-color: var(--button-bg);
 	color: var(--button-text);
-	border: 1px solid var(--button-outline);
-	boarder-radius: 0.5rem;
-	padding: 0.25rem 1rem;
-	text-align: center;
+	border: 1px solid var(--button-border);
+
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	padding: 0.75rem 1rem 0.7rem;
+	line-height: 1;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: all var(--animate-duration) ease-out;
+}
+
+.button:hover,
+.button:focus-visible {
+	transition: var(--animate-duration) ease-in;
+}
+
+.button:focus-visible {
+	--button-outline: var(--button-color);
+}
+
+.button:active {
+}
+
+.button:disabled,
+.button.button.disabled {
+	cursor: not-allowed;
 }
 
 .button.outline {
 	--button-bg: transparent;
-	--button-text: var(--button-outline);
+	--button-text: var(--button-color);
+}
+
+.button.outline:hover {
+	--button-bg: rgba(var(--button-r), var(--button-g), var(--button-b), 0.075);
 }
 
 .button.red {
-	--button-bg: #f00;
-	--button-text: #fff;
-	--button-outline: #f00;
+	--button-r: var(--red-r);
+	--button-g: var(--red-g);
+	--button-b: var(--red-b);
+}
+
+.button.blue {
+	--button-r: var(--light-blue-r);
+	--button-g: var(--light-blue-g);
+	--button-b: var(--light-blue-b);
+}
+
+.button.green {
+	--button-r: var(--green-r);
+	--button-g: var(--green-g);
+	--button-b: var(--green-b);
 }

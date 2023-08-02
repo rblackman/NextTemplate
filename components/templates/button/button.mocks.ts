@@ -1,13 +1,15 @@
 import { ButtonProps } from './button';
 
 const primary: ButtonProps = {
-	text: 'Default Button',
+	text: 'Link Button',
 	href: '#',
+	variant: 'default'
 };
 
 const buttonButton: ButtonProps = {
 	text: 'HTML Button Element',
 	buttonType: 'button',
+	variant: 'default'
 };
 
 export const mockButtonProps = {

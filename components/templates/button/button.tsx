@@ -6,7 +6,7 @@ import styles from './button.module.css';
 interface BaseButtonProps {
 	text: string;
 	outline?: boolean;
-	variant?: 'red' | 'green' | 'default';
+	variant?: 'default' | 'red' | 'blue' | 'green';
 }
 
 export interface LinkButtonProps extends BaseButtonProps {
