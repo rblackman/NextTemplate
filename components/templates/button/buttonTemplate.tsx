@@ -1,29 +1,29 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import styles from './button.module.css';
+import styles from './buttonTemplate.module.css';
 
-interface BaseButtonProps {
+interface BaseButtonTemplateProps {
 	children: ReactNode;
 	outline?: boolean;
 	variant?: 'default' | 'red' | 'blue' | 'green';
 }
 
-export interface LinkButtonProps extends BaseButtonProps {
+export interface LinkButtonTemplateProps extends BaseButtonTemplateProps {
 	href: string;
 }
 
-export interface ButtonButtonProps extends BaseButtonProps {
+export interface ButtonButtonTemplateProps extends BaseButtonTemplateProps {
 	buttonType: 'button' | 'submit' | 'reset';
 }
 
-export type ButtonProps = LinkButtonProps | ButtonButtonProps;
+export type ButtonTemplateProps = LinkButtonTemplateProps | ButtonButtonTemplateProps;
 
-function isLinkButton(props: ButtonProps): props is LinkButtonProps {
-	return typeof (props as LinkButtonProps)?.href === 'string';
+function isLinkButton(props: ButtonTemplateProps): props is LinkButtonTemplateProps {
+	return typeof (props as LinkButtonTemplateProps)?.href === 'string';
 }
 
-export default function BaseTemplate(props: ButtonProps): ReactNode {
+export default function ButtonTemplate(props: ButtonTemplateProps): ReactNode {
 	const { children, variant, outline } = props;
 	const variantClass = styles[variant ?? 'default'];
 	const classes = clsx({ [styles.button]: true, [styles.outline]: outline ?? false, [variantClass]: true });

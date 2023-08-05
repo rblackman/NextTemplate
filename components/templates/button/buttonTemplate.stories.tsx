@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button, { ButtonProps } from './button';
-import { mockButtonProps } from './button.mocks';
+import ButtonTemplate, { ButtonTemplateProps } from './buttonTemplate';
+import mockButtonTemplateProps from './buttonTemplate.mocks';
 
 const meta = {
 	title: 'templates/Button',
-	component: Button,
+	component: ButtonTemplate,
 	argTypes: {
 		children: {
 			name: 'Contents',
@@ -53,22 +53,22 @@ const meta = {
 			defaultValue: false,
 		},
 	},
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof ButtonTemplate>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const linkButtonArgs: ButtonProps = {
-	...mockButtonProps.primary,
+const linkButtonArgs: ButtonTemplateProps = {
+	...mockButtonTemplateProps.primary,
 };
 
 export const LinkButton: Story = {
 	args: linkButtonArgs,
 };
 
-const buttonButtonArgs: ButtonProps = {
-	...mockButtonProps.buttonButton,
+const buttonButtonArgs: ButtonTemplateProps = {
+	...mockButtonTemplateProps.buttonButton,
 };
 
 export const ButtonButton: Story = {

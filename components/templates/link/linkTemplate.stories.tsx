@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import BaseTemplate, { LinkTemplateProps } from './link';
-import { mockLinkProps } from './link.mocks';
+import LinkTemplate, { LinkTemplateProps } from './linkTemplate';
+import mockLinkTemplateProps from './linkTemplate.mocks';
 
 const meta = {
 	title: 'templates/LinkTemplate',
-	component: BaseTemplate,
+	component: LinkTemplate,
 	argTypes: {},
-} satisfies Meta<typeof BaseTemplate>;
+} satisfies Meta<typeof LinkTemplate>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 const primaryArgs: LinkTemplateProps = {
-	...mockLinkProps.primary,
+	...mockLinkTemplateProps.primary,
 };
 
 export const Primary: Story = {

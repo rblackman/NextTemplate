@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Link, { LinkProps as NextLinkProps } from 'next/link';
 import { ReactNode } from 'react';
-import styles from './link.module.css';
+import styles from './linkTemplate.module.css';
 
 export interface LinkTemplateProps extends Omit<NextLinkProps, 'href'> {
 	href: string;

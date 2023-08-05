@@ -1,4 +1,4 @@
-import Link from '@components/templates/link/link';
+import Link from '@components/templates/link/linkTemplate';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
