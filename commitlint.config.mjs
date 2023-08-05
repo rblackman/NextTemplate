@@ -9,7 +9,7 @@
 // revert: Reverts a previous commit.
 // chore: A small change not covered by the other topics.
 
-module.exports = {
+const config = {
 	extends: ['@commitlint/config-conventional'],
 	rules: {
 		'body-leading-blank': [1, 'always'],
@@ -30,3 +30,5 @@ module.exports = {
 		],
 	},
 };
+
+export default config;

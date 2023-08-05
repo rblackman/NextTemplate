@@ -1,4 +1,7 @@
 {
+	"env": {
+		"jest": true
+	},
 	"extends": ["plugin:storybook/recommended", "next", "next/core-web-vitals", "eslint:recommended", "prettier"],
 	"globals": {
 		"React": "readonly"

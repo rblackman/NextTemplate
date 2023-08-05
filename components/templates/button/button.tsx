@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import styles from './button.module.css';
 
 interface BaseButtonProps {
-	text: string;
+	children: ReactNode;
 	outline?: boolean;
 	variant?: 'default' | 'red' | 'blue' | 'green';
 }
@@ -24,7 +24,7 @@ function isLinkButton(props: ButtonProps): props is LinkButtonProps {
 }
 
 export default function BaseTemplate(props: ButtonProps): ReactNode {
-	const { text, variant, outline } = props;
+	const { children, variant, outline } = props;
 	const variantClass = styles[variant ?? 'default'];
 	const classes = clsx({ [styles.button]: true, [styles.outline]: outline ?? false, [variantClass]: true });
 
@@ -33,7 +33,7 @@ export default function BaseTemplate(props: ButtonProps): ReactNode {
 		const { href, ...linkProps } = props;
 		return (
 			<Link href={href} {...linkProps} className={classes}>
-				{text}
+				{children}
 			</Link>
 		);
 	}
@@ -42,7 +42,7 @@ export default function BaseTemplate(props: ButtonProps): ReactNode {
 	const { buttonType, ...buttonProps } = props;
 	return (
 		<button type={buttonType} {...buttonProps} className={classes}>
-			{text}
+			{children}
 		</button>
 	);
 }

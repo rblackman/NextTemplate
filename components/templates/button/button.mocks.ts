@@ -1,13 +1,13 @@
 import { ButtonProps } from './button';
 
 const primary: ButtonProps = {
-	text: 'Link Button',
+	children: 'Link Button',
 	href: '#',
 	variant: 'default',
 };
 
 const buttonButton: ButtonProps = {
-	text: 'HTML Button Element',
+	children: 'HTML Button Element',
 	buttonType: 'button',
 	variant: 'default',
 };

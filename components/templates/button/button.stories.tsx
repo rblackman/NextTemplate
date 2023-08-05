@@ -6,8 +6,8 @@ const meta = {
 	title: 'templates/Button',
 	component: Button,
 	argTypes: {
-		text: {
-			name: 'Text',
+		children: {
+			name: 'Contents',
 			description: 'The text to display on the button.',
 			table: {
 				category: 'Content',
