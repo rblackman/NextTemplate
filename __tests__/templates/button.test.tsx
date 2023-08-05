@@ -2,7 +2,7 @@ import Button from '@components/templates/button/button';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
-describe('Button Tests', () => {
+describe('Button Template Tests', () => {
 	it('Renders children', () => {
 		const text = 'Hello World';
 

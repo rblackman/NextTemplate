@@ -1,0 +1,8 @@
+.link {
+	color: var(--text);
+	text-decoration-color: var(--light-blue);
+}
+
+.link.red {
+	text-decoration-color: var(--red);
+}

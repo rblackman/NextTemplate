@@ -25,6 +25,7 @@
 	--white: rgb(var(--white-r), var(--white-g), var(--white-b));
 
 	--animate-duration: 0.2s;
+	--text: var(--black);
 }
 
 @media (prefers-reduced-motion) {
