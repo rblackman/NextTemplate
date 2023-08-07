@@ -34,12 +34,12 @@ jobs:
         run: |
           npm install
           npm run build:storybook
-      - name: Fix permissions
+      - name: Fix Permissions
         run: |
           chmod -v -R +rX "storybook-static/" | while read line; do
             echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
-      - name: Upload Pages artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v2
         with:
           name: github-pages
