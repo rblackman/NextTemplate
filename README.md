@@ -73,9 +73,9 @@ sequenceDiagram
     participant S as Server
     D->>G: git push
     activate G
-    G->>N: Check Types
+    G->>N: Test
     activate N
-    N->>N: tsc --noEmit
+    N->>N: jest --ci --coverage
     N->>G: All Good
     deactivate N
     G->>N: Build
