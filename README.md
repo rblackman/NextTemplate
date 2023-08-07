@@ -1,5 +1,8 @@
 # Ryan's Next JS Template
 
+[![Build and Test](https://github.com/rblackman/NextTemplate/actions/workflows/ci-build-test.yml/badge.svg)](https://github.com/rblackman/NextTemplate/actions/workflows/ci-build-test.yml)
+[![CodeQL](https://github.com/rblackman/NextTemplate/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/rblackman/NextTemplate/actions/workflows/github-code-scanning/codeql)
+
 This repository is my personal template for bootstrapping Next.JS projects.
 It contains packages and baseline configurations for my most commonly used tools.
 It is intended to get a project started quickly without spending hours setting up the environment.
