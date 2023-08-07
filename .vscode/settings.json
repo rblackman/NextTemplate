@@ -20,7 +20,10 @@
 		"**/.svn": true,
 		"**/CVS": true,
 		"**/Thumbs.db": true,
+		"**/coverage": true,
+		"**/next-env.d.ts": true,
 		"**/node_modules": true,
-		"**/yarn.lock": true
+		"**/package-lock.json": true,
+		"**/tsconfig.tsbuildinfo": true
 	}
 }

@@ -41,9 +41,8 @@
 		"webpack": "^5.88.2"
 	},
 	"engines": {
-		"node": ">=14.0.0",
-		"npm": "please-use-yarn",
-		"yarn": ">=1.22.0"
+		"node": ">=16.0.0",
+		"npm": ">=9.8.1"
 	},
 	"name": "storybook-sample",
 	"private": true,
