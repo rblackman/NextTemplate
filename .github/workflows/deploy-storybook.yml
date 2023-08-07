@@ -14,11 +14,14 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,13 +34,21 @@ jobs:
         run: |
           npm install
           npm run build:storybook
-      - name: Upload Artifact
+      - name: Fix Permissions
+        run: |
+          chmod -v -R +rX "storybook-static/" | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: github-pages
+          path: storybook-static/
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: storybook
+          name: frontend-assets
           path: storybook-static/
-          if-no-files-found: error
-
   deploy:
     needs: build
     permissions:
@@ -51,5 +62,3 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: storybook
