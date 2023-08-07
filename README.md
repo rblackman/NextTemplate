@@ -99,7 +99,6 @@ TODO
 
 [GitHub Actions][actions] are used for CI.
 Any pull request will trigger a CI run.
-A CI run will also be triggered by a push to the development branch.
 This run will build the site and run tests.
 If either the build or test fails, the action will fail.
 
