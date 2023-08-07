@@ -97,8 +97,13 @@ TODO
 
 ## CI
 
-TODO
+[GitHub Actions][actions] are used for CI. Any pull request or merge to main will trigger a CI run.
+This run will build the site and run tests.
+If either the build or test fails, the action will fail.
 
+There is also an action to deploy StoryBook to our [GitHub Pages][pages] site.
+
+[actions]: [https://github.com/features/actions]
 [commitlint]: [https://commitlint.js.org/#/]
 [client-only]: [https://www.npmjs.com/package/client-only]
 [clsx]: [https://www.npmjs.com/package/clsx]
@@ -107,6 +112,7 @@ TODO
 [jest]: [https://jestjs.io/]
 [lint-staged]: [https://github.com/okonet/lint-staged/]
 [next]: [https://nextjs.org/docs]
+[pages]: [https://pages.github.com/]
 [prettier]: [https://prettier.io/]
 [recoil]: [https://recoiljs.org/]
 [server-only]: [https://www.npmjs.com/package/server-only]
