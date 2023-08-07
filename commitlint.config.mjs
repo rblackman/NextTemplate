@@ -8,6 +8,7 @@
 // test: Adding missing tests or correcting existing tests
 // revert: Reverts a previous commit.
 // chore: A small change not covered by the other topics.
+// package: A change in the package.json file
 
 const config = {
 	extends: ['@commitlint/config-conventional'],
@@ -26,7 +27,7 @@ const config = {
 		'type-enum': [
 			2,
 			'always',
-			['add', 'feature', 'bug', 'chore', 'docs', 'refactor', 'revert', 'test', 'style', 'perf'],
+			['add', 'feature', 'bug', 'chore', 'docs', 'refactor', 'revert', 'test', 'style', 'perf', 'package'],
 		],
 	},
 };
