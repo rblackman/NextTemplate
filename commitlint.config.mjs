@@ -27,7 +27,7 @@ const config = {
 		'type-enum': [
 			2,
 			'always',
-			['add', 'feature', 'bug', 'chore', 'docs', 'refactor', 'revert', 'test', 'style', 'perf', 'package'],
+			['build', 'add', 'feature', 'bug', 'chore', 'docs', 'refactor', 'revert', 'test', 'style', 'perf', 'package'],
 		],
 	},
 };

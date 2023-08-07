@@ -1,0 +1,37 @@
+{
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"editorconfig.editorconfig",
+				"irongeek.vscode-env",
+				"dbaeumer.vscode-eslint",
+				"github.vscode-github-actions",
+				"github.copilot",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"davidanson.vscode-markdownlint",
+				"bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+				"esbenp.prettier-vscode",
+				"richie5um2.vscode-sort-json",
+				"jock.svg",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"forwardPorts": [3000, 6006],
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-20",
+	"portsAttributes": {
+		"3000": {
+			"label": "Next",
+			"onAutoForward": "openPreview"
+		},
+		"6006": {
+			"label": "StoryBook",
+			"onAutoForward": "openPreview"
+		}
+	},
+	"postAttachCommand": "npm run dev",
+	"postCreateCommand": "npm install",
+	"updateContentCommand": "npm install",
+	"waitFor": "postCreateCommand"
+}
