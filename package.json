@@ -49,16 +49,16 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
-		"build-storybook": "storybook build",
+		"build:storybook": "storybook build",
 		"dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+		"dev:storybook": "storybook dev -p 6006",
 		"lint": "next lint",
+		"lint:prettier": "prettier --write .",
+		"lint:type": "tsc --noEmit",
 		"prepare": "husky install",
-		"prettier": "prettier --write .",
 		"start": "next start",
-		"storybook": "storybook dev -p 6006",
 		"test": "jest",
-		"test:ci": "jest --ci --coverage",
-		"type-check": "tsc --noEmit"
+		"test:ci": "jest --ci --coverage"
 	},
 	"type": "module",
 	"version": "0.1.0"
