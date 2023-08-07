@@ -8,7 +8,7 @@ on:
     branches: ['main']
 
 env:
-  API_ENDPOINT: ${{ vars.API_ENDPOINT }}
+  API_ENDPOINT: API_ENDPOINT=https://jsonplaceholder.typicode.com/todos/1
 
 jobs:
   build:
