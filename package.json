@@ -57,7 +57,7 @@
 		"prepare": "husky install",
 		"start": "next start",
 		"test": "jest",
-		"test:ci": "jest --ci --coverage"
+		"test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
 	},
 	"type": "module",
 	"version": "0.1.0"
