@@ -1,4 +1,8 @@
 {
+	"author": {
+		"name": "Ryan Blackman",
+		"url": "https://github.com/rblackman"
+	},
 	"dependencies": {
 		"client-only": "^0.0.1",
 		"clsx": "^2.0.0",
@@ -44,8 +48,9 @@
 		"node": ">=16.8.0",
 		"npm": ">=6.14.18"
 	},
-	"name": "storybook-sample",
+	"name": "nextjs-starter",
 	"private": true,
+	"repository": "github:rblackman/NextTemplate",
 	"scripts": {
 		"build": "next build",
 		"build:storybook": "storybook build",
