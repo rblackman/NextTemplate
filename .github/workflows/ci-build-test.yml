@@ -10,7 +10,7 @@ on:
     branches: ['main']
 
 env:
-  API_ENDPOINT: ${{ vars.API_ENDPOINT }}
+  API_ENDPOINT: https://jsonplaceholder.typicode.com/todos/1
 
 jobs:
   build:
@@ -21,9 +21,6 @@ jobs:
       matrix:
         node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    environment:
-      name: CI
 
     steps:
       - name: Checkout
