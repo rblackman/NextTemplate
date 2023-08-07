@@ -103,6 +103,17 @@ If either the build or test fails, the action will fail.
 
 There is also an action to deploy StoryBook to our [GitHub Pages][pages] site.
 
+```mermaid
+flowchart TD
+    A(Local Code Changes on 'foo') -->|git push| B[Create Pull Request to 'main']
+    B -->|trigger 'CI - Build and Test'| C{Success?}
+    C -->|yes| D[Merge Pull Request]
+    C -->|no| A
+    D -->|Trigger 'Deploy Storybook'| E{Success?}
+    E -->|Yes| F(Storybook Deployed to GitHub Pages)
+    E -->|No| G(Storybook NOT Deployed to GitHub Pages)
+```
+
 [actions]: [https://github.com/features/actions]
 [commitlint]: [https://commitlint.js.org/#/]
 [client-only]: [https://www.npmjs.com/package/client-only]
