@@ -97,11 +97,14 @@ TODO
 
 ## CI
 
-[GitHub Actions][actions] are used for CI. Any pull request or merge to main will trigger a CI run.
+[GitHub Actions][actions] are used for CI.
+Any pull request will trigger a CI run.
+A CI run will also be triggered by a push to the development branch.
 This run will build the site and run tests.
 If either the build or test fails, the action will fail.
 
 There is also an action to deploy StoryBook to our [GitHub Pages][pages] site.
+This action runs when a PR is merged into main.
 
 ```mermaid
 flowchart TD
