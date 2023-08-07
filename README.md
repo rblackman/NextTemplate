@@ -90,6 +90,12 @@ sequenceDiagram
 
 ## Commit Styles
 
+TODO
+
+## CI
+
+TODO
+
 [commitlint]: [https://commitlint.js.org/#/]
 [client-only]: [https://www.npmjs.com/package/client-only]
 [clsx]: [https://www.npmjs.com/package/clsx]
