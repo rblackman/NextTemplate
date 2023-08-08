@@ -95,15 +95,30 @@ sequenceDiagram
 
 TODO
 
-## CI
+## GitHub Actions
 
-[GitHub Actions][actions] are used for CI.
-Any pull request will trigger a CI run.
+[GitHub Actions][actions]are used to automate various tasks related to the repository.
+
+### CI - Build and Test
+
+Any pull request into `main` will trigger a CI run.
 This run will build the site and run tests.
 If either the build or test fails, the action will fail.
+If the CI run fails, merging will not be allowed.
+See [GitHub Setup](#github-setup) for more information.
 
 There is also an action to deploy StoryBook to our [GitHub Pages][pages] site.
 This action runs when a PR is merged into main.
+
+### Deploy Storybook
+
+When a PR is successfully merged into main. The Deploy Storybook action runs.
+This action builds Storybook and deploys it to the site's GitHub pages.
+
+### DependaBot Auto Merge and Approve
+
+When Dependabot creates a PR, this action automatically approves it if status checks run.
+If you are cloning this repo for a production critical application, consider disabling this action.
 
 ```mermaid
 flowchart TD
@@ -115,6 +130,8 @@ flowchart TD
     E -->|Yes| F(Storybook Deployed to GitHub Pages)
     E -->|No| G(Storybook NOT Deployed to GitHub Pages)
 ```
+
+## GitHub Setup
 
 [actions]: [https://github.com/features/actions]
 [commitlint]: [https://commitlint.js.org/#/]

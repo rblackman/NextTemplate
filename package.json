@@ -48,6 +48,7 @@
 		"node": ">=16.8.0",
 		"npm": ">=6.14.18"
 	},
+	"license": "apache-2.0",
 	"name": "nextjs-starter",
 	"private": true,
 	"repository": "github:rblackman/NextTemplate",
@@ -65,5 +66,5 @@
 		"test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter.mjs'"
 	},
 	"type": "module",
-	"version": "0.1.0"
+	"version": "1.0.0"
 }
