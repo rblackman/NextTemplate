@@ -21,7 +21,7 @@
 		"@storybook/addon-interactions": "^7.2.2",
 		"@storybook/addon-links": "^7.2.3",
 		"@storybook/blocks": "^7.2.2",
-		"@storybook/nextjs": "^7.2.3",
+		"@storybook/nextjs": "^7.3.2",
 		"@storybook/react": "^7.2.2",
 		"@storybook/testing-library": "0.2.0",
 		"@testing-library/jest-dom": "^5.17.0",
