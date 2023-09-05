@@ -1,12 +1,11 @@
+import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
 	dir: './',
 });
 
-// Add any custom config to be passed to Jest
-/** @type {import('jest').Config} */
-const config = {
+const config: Config = {
 	// Add more setup options before each test is run
 	// setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 	moduleNameMapper: {
@@ -18,7 +17,8 @@ const config = {
 		'^@components/(.*)$': '<rootDir>/components/$1',
 	},
 	testEnvironment: 'jest-environment-jsdom',
-	setupFilesAfterEnv: ['<rootDir>/jest.setup.mjs'],
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 
-export default createJestConfig(config);
+const jestConfig = createJestConfig(config);
+export default jestConfig;
