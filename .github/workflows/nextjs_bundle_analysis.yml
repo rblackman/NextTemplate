@@ -20,6 +20,9 @@ permissions:
   actions: read # for fetching base branch bundle stats
   pull-requests: write # for comments
 
+env:
+  API_ENDPOINT: ${{ vars.API_ENDPOINT }}
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
