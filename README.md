@@ -115,6 +115,11 @@ This action runs when a PR is merged into main.
 When a PR is successfully merged into main. The Deploy Storybook action runs.
 This action builds Storybook and deploys it to the site's GitHub pages.
 
+### Bundle Size Analysis
+
+[nextjs-bundle-analysis][bundle] is used to track changes to the bundle size in Next.JS.
+Configuration is found in the `nextBundleAnalysis` section of `package.json`.
+
 ### DependaBot Auto Merge and Approve
 
 When Dependabot creates a PR, this action automatically approves it if status checks run.
@@ -134,6 +139,7 @@ flowchart TD
 ## GitHub Setup
 
 [actions]: [https://github.com/features/actions]
+[bundle]: [https://github.com/hashicorp/nextjs-bundle-analysis]
 [commitlint]: [https://commitlint.js.org/#/]
 [client-only]: [https://www.npmjs.com/package/client-only]
 [clsx]: [https://www.npmjs.com/package/clsx]
