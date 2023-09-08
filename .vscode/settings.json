@@ -5,7 +5,7 @@
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"cSpell.words": ["autodocs", "clsx", "commitlint", "nextjs", "Parens", "unoptimized", "Viewports"],
+	"cSpell.words": ["autodocs", "clsx", "commitlint", "nextjs", "Parens", "Rulesets", "unoptimized", "Viewports"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true,
 		"source.organizeImports": true
