@@ -125,6 +125,7 @@ If you are cloning this repo for a production critical application, consider dis
 flowchart TD
     A(Local Code Changes on 'foo') -->|git push| B[Create Pull Request to 'main']
     B -->|trigger 'CI - Build and Test'| C{Success?}
+    B -->|trigger 'Next.js Bundle Analysis'| BA(Report Bundle Size)
     C -->|yes| D[Merge Pull Request]
     C -->|no| A
     D -->|Trigger 'Deploy Storybook'| E{Success?}
