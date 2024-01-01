@@ -47,8 +47,8 @@
 		"webpack": "^5.89.0"
 	},
 	"engines": {
-		"node": ">=16.8.0",
-		"npm": ">=6.14.18"
+		"node": ">=20.10.0",
+		"npm": ">=10.2.3"
 	},
 	"license": "apache-2.0",
 	"name": "nextjs-starter",
