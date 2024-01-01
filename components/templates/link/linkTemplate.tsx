@@ -12,9 +12,13 @@ export interface LinkTemplateProps extends Omit<NextLinkProps, 'href'> {
 export default function LinkTemplate({ children, href, className, ...props }: LinkTemplateProps): ReactNode {
 	const customClass = styles[className ?? 'default'];
 	const classes = clsx({ [styles.link]: true, [customClass]: typeof className === 'string' });
-	return <Link href={href} className={classes} {...props}>{children}</Link>
+	return (
+		<Link href={href} className={classes} {...props}>
+			{children}
+		</Link>
+	);
 }
 
 LinkTemplate.defaultProps = {
-	className: undefined
+	className: undefined,
 };
