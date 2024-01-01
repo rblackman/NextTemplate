@@ -73,5 +73,5 @@
 		"test": "jest",
 		"test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter.mjs'"
 	},
-	"version": "1.0.0"
+	"version": "1.1.0"
 }
