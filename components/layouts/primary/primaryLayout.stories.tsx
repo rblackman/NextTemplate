@@ -12,8 +12,8 @@ const meta = {
 			table: {
 				category: 'Content',
 			},
-		}
-	}
+		},
+	},
 } satisfies Meta<typeof PrimaryLayout>;
 
 export default meta;

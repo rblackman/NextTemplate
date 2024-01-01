@@ -1,8 +1,8 @@
-import { LinkTemplateProps } from "./linkTemplate";
+import { LinkTemplateProps } from './linkTemplate';
 
 const primary: LinkTemplateProps = {
 	href: '#',
-	children: 'My link'
+	children: 'My link',
 };
 
 const mockLinkTemplateProps = {
