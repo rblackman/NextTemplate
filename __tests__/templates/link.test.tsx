@@ -6,7 +6,7 @@ describe('Link Template Tests', () => {
 	it('Renders children', () => {
 		const text = 'Hello World';
 
-		render(<Link href='#'>{text}</Link>);
+		render(<Link href="#">{text}</Link>);
 
 		const link = screen.getByText(text);
 
@@ -30,12 +30,15 @@ describe('Link Template Tests', () => {
 		const text = 'Hello World';
 		const className = 'red';
 
-		render(<Link href='#' className={className}>{text}</Link>);
+		render(
+			<Link href="#" className={className}>
+				{text}
+			</Link>,
+		);
 
 		const link = screen.getByRole('link');
 
 		expect(link).toBeInTheDocument();
 		expect(link).toHaveClass(className);
 	});
-
 });
