@@ -7,11 +7,16 @@
 	},
 	"cSpell.words": ["autodocs", "clsx", "commitlint", "nextjs", "Parens", "Rulesets", "unoptimized", "Viewports"],
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.organizeImports": true
+		"source.fixAll": "explicit",
+		"source.organizeImports": "explicit"
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
+	"files.associations": {
+		"*.env": "env",
+		".env": "env",
+		".env.*": "env"
+	},
 	"files.exclude": {
 		"**/.DS_Store": true,
 		"**/.git": true,
@@ -24,7 +29,7 @@
 		"**/next-env.d.ts": true,
 		"**/node_modules": true,
 		"**/package-lock.json": true,
-		"**/tsconfig.tsbuildinfo": true,
-		"**/storybook-static": true
+		"**/storybook-static": true,
+		"**/tsconfig.tsbuildinfo": true
 	}
 }
