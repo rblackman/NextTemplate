@@ -147,42 +147,12 @@ GitHub Pages is used to host Storybook. Go to _Settings > Pages_. Under _Build a
 
 ### Add branch protection rules
 
-Go to _Settings > Rules > Rulesets_:
+1. Go to _Settings > Rules > Rulesets_.
+2. Click the down arrow next to _New ruleset_ and select _Import a ruleset_.
+3. Select the `docs/Protect main.json` file.
+4. Repeat the steps for `Protect development.json`.
 
-#### Main
-
-Create a new rule called _Protect main_.
-
-- Set _Enforcement status_ to _Active_.
-- Set _Target branches_ to _Include default branch_.
-- Under _Branch protections_
-  - Check _Restrict deletions_.
-  - Check _Require a pull request before merging_
-    - Under _Additional settings_
-      - Check _Dismiss stale pull request approvals when new commits are pushed_.
-  - Check _Require status checks to pass before merging_
-    - Under _Additional Settings_
-      - Check _Require branches to be up to date before merging_
-      - Add the following status checks:
-        - `CodeQL`
-        - `Build and Test (18.x)`
-        - `Build and Test (16.x)`
-        - `Analyze (javascript)`
-  - Check _Block force pushes_.
-
-![Screenshot of the above list of rules for main branch](docs/main-rules.png)
-
-#### Development
-
-Create a new rule called _Protect development_
-
-- Set _Enforcement status_ to _Active_.
-- Set _Target branches_ to _Include by pattern_ and enter _development_ as the pattern.
-- Under _Branch protections_
-  - Check _Restrict deletions_.
-  - Check _Block force pushes_.
-
-![Screenshot of the above list of rules for development branch](docs/dev-rules.png)
+![Screenshot of import button](docs/import-ruleset.png)
 
 ### Secret scanning
 
