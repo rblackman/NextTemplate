@@ -1,0 +1,22 @@
+{
+  "id": 65819,
+  "name": "Protect development",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "rblackman/NextTemplate",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/heads/development"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    }
+  ],
+  "bypass_actors": []
+}

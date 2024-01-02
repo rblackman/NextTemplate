@@ -5,3 +5,5 @@ public
 node_modules
 next-env.d.ts
 next.config.ts
+Protect-development.json
+Protect-main.json

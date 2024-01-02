@@ -1,0 +1,62 @@
+{
+  "id": 65681,
+  "name": "Protect main",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "rblackman/NextTemplate",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": false
+      }
+    },
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": true,
+        "required_status_checks": [
+          {
+            "context": "CodeQL",
+            "integration_id": 57789
+          },
+          {
+            "context": "Analyze (javascript)",
+            "integration_id": 15368
+          },
+          {
+            "context": "Build and Test (20.x)",
+            "integration_id": 15368
+          },
+          {
+            "context": "Build and Test (21.x)",
+            "integration_id": 15368
+          }
+        ]
+      }
+    },
+    {
+      "type": "required_linear_history"
+    }
+  ],
+  "bypass_actors": []
+}
